@@ -1,4 +1,4 @@
 nats_cli
 ========
 
-TODO: fill me in
+Helpers for making command-line NATS clients
