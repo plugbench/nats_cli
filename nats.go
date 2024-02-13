@@ -12,10 +12,10 @@ type Config struct {
 	Token string
 }
 
-func LoadConfigFromEnvironment() Config {
+func LoadConfigFromEnvironment() (Config, error) {
 	return Config{
 		Token: os.Getenv("NATS_TOKEN"),
-	}
+	}, nil
 }
 
 func (cfg Config) Connect() (*nats.Conn, error) {
